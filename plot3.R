@@ -15,7 +15,7 @@ hpc$datetime <- strptime(paste(hpc$Date, hpc$Time), "%Y-%m-%d %H:%M:%S")
 plot(hpc$datetime, hpc$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(hpc$datetime, hpc$Sub_metering_2, col = "Red")
 lines(hpc$datetime, hpc$Sub_metering_3, col = "Blue")
-legend("topright", lty = 1, lwd = 2, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+legend("topright", lty = 1, lwd = c(1,1), col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex=.5)
 
 # put in png file
 dev.copy(png, file = "plot3.png", height = 480, width = 480)
